@@ -20,44 +20,32 @@ import java.net.URL;
  *
  * @author Yami
  */
+//ANDREA MILESI 5AI TPI PROGETTO GEOLOCALIZZAZIONE
 public class Richiesta {
-    //Attributi per la richiesta
-    private HttpURLConnection connection;
-    private URL url;
-    //Classe Località
-    private Località location;
-    
-    PrintWriter printer;
    
-   
-    public Richiesta (Località location) throws MalformedURLException, FileNotFoundException
-    {
-        
-        this.location = location;
-        //Prender l URL della location
-        url = new URL (location.toURL());
-        //Crea Il File XML
-        printer = new PrintWriter (new FileOutputStream ("GeolocalizzazioneXMLFile.xml"));
+    public Richiesta (){ 
     }
-   
     /*
         Questo metodo rende la richiesta HTTP e converte la risposta in un file XML.
     */
-    public void get () throws IOException
+    public  static void get (Località location) throws IOException
     {
-        //Si apre una connessione
-        HttpURLConnection connection = (HttpURLConnection) url.openConnection ();
-        //il Buffered Reader legge e scrive
-        BufferedReader read = new BufferedReader (new InputStreamReader (connection.getInputStream ()));
         
+       //inizia connessione
+        URL url = new URL (location.toURL()); 
+        HttpURLConnection connection = (HttpURLConnection) url.openConnection ();
+        
+        //legge e scrive , bufferedReader PrintWriter
         String line;
-        do {
-            line = read.readLine ();
+        BufferedReader reader = new BufferedReader (new InputStreamReader (connection.getInputStream ()));
+        PrintWriter printer = new PrintWriter (new FileOutputStream ("XMLGeoLocalizzazione.xml"));
+        while ((line = reader.readLine()) != null)
+        {
             printer.println(line);
-            line = read.readLine();
-        } while (line != null);
+        }
+        
         
         printer.close();
-   
+        reader.close();
     }
 }

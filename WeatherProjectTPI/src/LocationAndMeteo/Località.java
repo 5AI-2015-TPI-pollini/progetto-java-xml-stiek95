@@ -11,11 +11,12 @@ package LocationAndMeteo;
  *
  * @author Yami
  */
+//ANDREA MILESI 5AI TPI PROGETTO GEOLOCALIZZAZIONE
 public class Località {
     //atttributi località
     private String address;
-    private float latitude;
-    private float longitude;
+    private float Latitudine;
+    private float Longitudine;
    
     //URL uguale per tutte le localizzazioni , è quello standard
     private String url = "https://maps.googleapis.com/maps/api/geocode/xml?";
@@ -26,22 +27,22 @@ public class Località {
         this.address = address;
        
     }
-    public void setCoordinates (float lat, float lon)
+    public void setCoordinates (float latitudine, float longitudine)
     {
-        latitude = lat;
-        longitude = lon;
+        this.Latitudine = latitudine;
+        this.Longitudine = longitudine;
     }
     
     
-    public float getLatitude ()
+    public float getLatitudine ()
     {
-        return latitude;
+        return Latitudine;
     }
     
     
-    public float getLongitude ()
+    public float getLongitudine ()
     {
-        return longitude;
+        return Longitudine;
     }
 
     /*
@@ -52,7 +53,7 @@ public class Località {
     public String toURL ()
     {
        String temp = address;
-       temp.replace(" ", "+");
+       temp = temp.replace(' ', '+');
        return url + "address=" + temp;
     }
 }

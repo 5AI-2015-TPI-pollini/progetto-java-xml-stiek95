@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GeocodeResponse>
+ <status>OK</status>
+ <result>
+  <type>locality</type>
+  <type>political</type>
+  <formatted_address>New York, NY, USA</formatted_address>
+  <address_component>
+   <long_name>New York</long_name>
+   <short_name>NY</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>New York</long_name>
+   <short_name>NY</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>40.7127837</lat>
+    <lng>-74.0059413</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>40.4960439</lat>
+     <lng>-74.2557349</lng>
+    </southwest>
+    <northeast>
+     <lat>40.9152556</lat>
+     <lng>-73.7002721</lng>
+    </northeast>
+   </viewport>
+   <bounds>
+    <southwest>
+     <lat>40.4960439</lat>
+     <lng>-74.2557349</lng>
+    </southwest>
+    <northeast>
+     <lat>40.9152556</lat>
+     <lng>-73.7002721</lng>
+    </northeast>
+   </bounds>
+  </geometry>
+  <place_id>ChIJOwg_06VPwokRYv534QaPC8g</place_id>
+ </result>
+ <result>
+  <type>locality</type>
+  <type>political</type>
+  <formatted_address>New York, IA 50238, USA</formatted_address>
+  <address_component>
+   <long_name>New York</long_name>
+   <short_name>New York</short_name>
+   <type>locality</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Union</long_name>
+   <short_name>Union</short_name>
+   <type>administrative_area_level_3</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Wayne County</long_name>
+   <short_name>Wayne County</short_name>
+   <type>administrative_area_level_2</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>Iowa</long_name>
+   <short_name>IA</short_name>
+   <type>administrative_area_level_1</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>United States</long_name>
+   <short_name>US</short_name>
+   <type>country</type>
+   <type>political</type>
+  </address_component>
+  <address_component>
+   <long_name>50238</long_name>
+   <short_name>50238</short_name>
+   <type>postal_code</type>
+  </address_component>
+  <geometry>
+   <location>
+    <lat>40.8516701</lat>
+    <lng>-93.2599318</lng>
+   </location>
+   <location_type>APPROXIMATE</location_type>
+   <viewport>
+    <southwest>
+     <lat>40.8503211</lat>
+     <lng>-93.2612808</lng>
+    </southwest>
+    <northeast>
+     <lat>40.8530191</lat>
+     <lng>-93.2585828</lng>
+    </northeast>
+   </viewport>
+  </geometry>
+  <place_id>ChIJD_qB3F8X6YcRDraFbXmLUD4</place_id>
+ </result>
+</GeocodeResponse>
