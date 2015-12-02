@@ -14,6 +14,8 @@ package LocationAndMeteo;
 public class Località {
     //atttributi località
     private String address;
+    private float latitude;
+    private float longitude;
    
     //URL uguale per tutte le localizzazioni , è quello standard
     private String url = "https://maps.googleapis.com/maps/api/geocode/xml?";
@@ -24,7 +26,24 @@ public class Località {
         this.address = address;
        
     }
-   
+    public void setCoordinates (float lat, float lon)
+    {
+        latitude = lat;
+        longitude = lon;
+    }
+    
+    
+    public float getLatitude ()
+    {
+        return latitude;
+    }
+    
+    
+    public float getLongitude ()
+    {
+        return longitude;
+    }
+
     /*
         questo metodo converte gli attributi della località nell'url necessario per fare la
         richiesta http al servizio di georeferenziazione di google sostituisce gli spazi negli

@@ -21,44 +21,42 @@ import java.net.URL;
  * @author Yami
  */
 public class Richiesta {
-    //Connection attributes
+    //Attributi per la richiesta
     private HttpURLConnection connection;
     private URL url;
-    //Location
+    //Classe Località
     private Località location;
-    //XML Printer
+    
     PrintWriter printer;
    
-    //Constructor
+   
     public Richiesta (Località location) throws MalformedURLException, FileNotFoundException
     {
-        //It saves the location
+        
         this.location = location;
-        //It gets the url from the location
+        //Prender l URL della location
         url = new URL (location.toURL());
-        //It initializes the printer and then it creates the XML file with the answer
-        printer = new PrintWriter (new FileOutputStream ("google_answer.xml"));
+        //Crea Il File XML
+        printer = new PrintWriter (new FileOutputStream ("GeolocalizzazioneXMLFile.xml"));
     }
    
     /*
-        This method makes the Http request and converts the answer in a XML file.
-        First it opens the connection with the Google's Service, then it reads the answer line by line.
-        Lastly it create a XML file with the answer.
+        Questo metodo rende la richiesta HTTP e converte la risposta in un file XML.
     */
     public void get () throws IOException
     {
-        //It opens a connection through the URL builded in the Constructor
+        //Si apre una connessione
         HttpURLConnection connection = (HttpURLConnection) url.openConnection ();
-        //Thanks to the BufferedReader it reads line by line saving them in a XML file
+        //il Buffered Reader legge e scrive
         BufferedReader read = new BufferedReader (new InputStreamReader (connection.getInputStream ()));
-        //It creates a line and then scans all the others till there aren't more lines
+        
         String line;
         do {
             line = read.readLine ();
             printer.println(line);
             line = read.readLine();
         } while (line != null);
-        //It closes the XML printer
+        
         printer.close();
    
     }
