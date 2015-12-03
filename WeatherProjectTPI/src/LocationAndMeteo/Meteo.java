@@ -49,6 +49,28 @@ public class Meteo {
         Pressione = pressione;
     }
     
+    public String getMeteo ()
+    {
+        return Tempo;
+    }
+    
+    
+    public String getTemperatura ()
+    {
+        return Float.toString(Temperatura) + "°C";
+    }
+    
+    
+    public String getUmidita ()
+    {
+       return Float.toString(Umidita) + "%";
+    }
+    
+    
+    public String getPressione ()
+    {
+        return Float.toString(Pressione) + "hPa";
+    }
     
     public String toString ()
     {
