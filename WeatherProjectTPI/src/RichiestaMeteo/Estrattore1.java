@@ -5,7 +5,7 @@
  */
 package RichiestaMeteo;
 
-import LocationAndMeteo.Località;
+import LocationAndMeteo.Localita;
 import LocationAndMeteo.Meteo;
 import java.io.FileInputStream;
 import static java.util.stream.DoubleStream.builder;
@@ -24,7 +24,7 @@ public class Estrattore1 {
     public Estrattore1 () {
     }
     
-    public static Meteo EstrattoreTempo (Località location) throws ParserConfigurationException
+    public static Meteo EstrattoreTempo (Localita location) throws ParserConfigurationException
     {
         //attributi per l xpath
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();

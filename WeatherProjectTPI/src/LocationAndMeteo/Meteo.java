@@ -17,10 +17,10 @@ public class Meteo {
     private float Pressione; //hPa
     
     //Località
-    private Località location;
+    private Localita location;
     
    
-    public Meteo (Località location)
+    public Meteo (Localita location)
     {
         this.location = location;
     }

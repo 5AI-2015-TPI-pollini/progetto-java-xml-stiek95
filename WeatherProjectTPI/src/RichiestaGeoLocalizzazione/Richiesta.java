@@ -6,7 +6,7 @@
 package RichiestaGeoLocalizzazione;
 
 
-import LocationAndMeteo.Località;
+import LocationAndMeteo.Localita;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -28,7 +28,7 @@ public class Richiesta {
     /*
         Questo metodo rende la richiesta HTTP e converte la risposta in un file XML.
     */
-    public  static void get (Località location) throws IOException
+    public  static void get (Localita location) throws IOException
     {
         
        //inizia connessione

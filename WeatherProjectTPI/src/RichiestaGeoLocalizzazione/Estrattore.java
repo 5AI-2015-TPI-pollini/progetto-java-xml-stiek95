@@ -5,7 +5,7 @@
  */
 package RichiestaGeoLocalizzazione;
 
-import LocationAndMeteo.Località;
+import LocationAndMeteo.Localita;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -29,7 +29,7 @@ public class Estrattore {
     public Estrattore () {
     }
     
-    public  static Località EstrattoreLocalizzazione (Località location) throws FileNotFoundException, ParserConfigurationException
+    public  static Localita EstrattoreLocalizzazione (Localita location) throws FileNotFoundException, ParserConfigurationException
     {
         //Serve per l Xpath
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();

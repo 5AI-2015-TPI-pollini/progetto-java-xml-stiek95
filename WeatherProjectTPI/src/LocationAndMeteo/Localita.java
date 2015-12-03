@@ -12,7 +12,7 @@ package LocationAndMeteo;
  * @author Yami
  */
 //ANDREA MILESI 5AI TPI PROGETTO GEOLOCALIZZAZIONE
-public class Località {
+public class Localita {
     //atttributi località
     private String address;
     private float Latitudine;
@@ -22,7 +22,7 @@ public class Località {
     private String url = "https://maps.googleapis.com/maps/api/geocode/xml?";
    
    
-    public Località (String a)  //costruttore
+    public Localita (String a)  //costruttore
     {
         address = a;
        

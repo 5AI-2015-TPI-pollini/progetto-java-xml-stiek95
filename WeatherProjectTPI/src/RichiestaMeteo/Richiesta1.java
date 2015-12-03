@@ -5,7 +5,7 @@
  */
 package RichiestaMeteo;
 
-import LocationAndMeteo.Località;
+import LocationAndMeteo.Localita;
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -22,7 +22,7 @@ public class Richiesta1 {
     public Richiesta1 () {
     }
     
-    public static void get (Località location) throws IOException
+    public static void get (Localita location) throws IOException
     {
         //Inizio Connessione
         URL url = new URL (location.toMeteoURL()); 

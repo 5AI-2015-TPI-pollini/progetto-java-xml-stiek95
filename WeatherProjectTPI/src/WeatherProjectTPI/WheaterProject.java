@@ -1,7 +1,7 @@
 package WeatherProjectTPI;
 
 import RichiestaGeoLocalizzazione.Richiesta;
-import LocationAndMeteo.Località;
+import LocationAndMeteo.Localita;
 import LocationAndMeteo.Meteo;
 import RichiestaGeoLocalizzazione.Estrattore;
 import RichiestaMeteo.Estrattore1;
@@ -38,7 +38,7 @@ public class WheaterProject {
         BufferedReader myInput = new BufferedReader (reader);
         String prov = new String();
         try { prov = myInput.readLine(); } catch (IOException e) {}       
-        Località location = new Località (prov);
+        Localita location = new Localita (prov);
         Richiesta.get(location);
         location = RichiestaGeoLocalizzazione.Estrattore.EstrattoreLocalizzazione (location);
         RichiestaMeteo.Richiesta1.get(location);
