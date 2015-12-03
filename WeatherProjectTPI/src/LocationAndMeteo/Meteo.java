@@ -24,12 +24,6 @@ public class Meteo {
     {
         this.location = location;
     }
-    
-    //questo metodo permette di salvare la risposta di openweather
-    public void setResults (String climateCondition, float temperatura)
-    {
-        this.Temperatura = temperatura;
-    }
         
     
     public void setMeteo (String w)

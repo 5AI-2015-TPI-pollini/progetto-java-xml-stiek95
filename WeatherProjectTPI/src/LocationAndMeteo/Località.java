@@ -22,15 +22,15 @@ public class Località {
     private String url = "https://maps.googleapis.com/maps/api/geocode/xml?";
    
    
-    public Località (String address)  //costruttore
+    public Località (String a)  //costruttore
     {
-        this.address = address;
+        address = a;
        
     }
-    public void setCoordinates (float latitudine, float longitudine)
+    public void setCoordinates (float lat, float lon)
     {
-        this.Latitudine = latitudine;
-        this.Longitudine = longitudine;
+        Latitudine = lat;
+        Longitudine = lon;
     }
     
     
@@ -62,7 +62,7 @@ public class Località {
     }
     public String toMeteoURL ()
     {
-        String url = "http://api.openweathermap.org/data/2.5/weather?";
-        return url + "lat=" + Latitudine + "&lon=" + Longitudine + "&units=metric&appid=d5266bad87ce211d1b641f024f889807&mode=xml";
+        String url2 = "http://api.openweathermap.org/data/2.5/weather?";
+        return url2 + "lat=" + Latitudine + "&lon=" + Longitudine + "&units=metric&appid=d5266bad87ce211d1b641f024f889807&mode=xml";
     }
 }

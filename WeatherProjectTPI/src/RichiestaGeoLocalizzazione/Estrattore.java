@@ -38,7 +38,7 @@ public class Estrattore {
         
         try {
             
-            locationDocument =  builder.parse(new FileInputStream("google_answer.xml"));
+            locationDocument =  builder.parse(new FileInputStream("XMLGeoLocalizzazione.xml"));
             String LatitudeExpression = "/GeocodeResponse/result/geometry/location/lat/text()";
             String LongitudeExpression = "/GeocodeResponse/result/geometry/location/lng/text()";
             XPath xPath =  XPathFactory.newInstance().newXPath();

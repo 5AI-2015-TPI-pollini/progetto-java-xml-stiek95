@@ -4,6 +4,7 @@ import RichiestaGeoLocalizzazione.Richiesta;
 import LocationAndMeteo.Località;
 import LocationAndMeteo.Meteo;
 import RichiestaGeoLocalizzazione.Estrattore;
+import RichiestaMeteo.Estrattore1;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -32,7 +33,7 @@ public class WheaterProject {
      */
     public static void main(String[] args) throws MalformedURLException, IOException, FileNotFoundException, ParserConfigurationException{
         
-        System.out.println("inserire nome della location:");
+        System.out.println("Inserire nome della location:");
         InputStreamReader reader = new InputStreamReader (System.in);
         BufferedReader myInput = new BufferedReader (reader);
         String prov = new String();
@@ -41,7 +42,7 @@ public class WheaterProject {
         Richiesta.get(location);
         location = RichiestaGeoLocalizzazione.Estrattore.EstrattoreLocalizzazione (location);
         RichiestaMeteo.Richiesta1.get(location);
-        Meteo weather = RichiestaMeteo.Estrattore1.EstrattoreTempo(location);
+        Meteo weather = Estrattore1.EstrattoreTempo(location);
         System.out.println (weather.toString());
     }
     
