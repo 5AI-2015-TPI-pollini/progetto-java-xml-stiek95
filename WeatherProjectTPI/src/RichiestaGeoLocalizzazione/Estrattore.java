@@ -29,7 +29,7 @@ public class Estrattore {
     public Estrattore () {
     }
     
-    public  static Località drawLocation (Località location) throws FileNotFoundException, ParserConfigurationException
+    public  static Località EstrattoreLocalizzazione (Località location) throws FileNotFoundException, ParserConfigurationException
     {
         //Serve per l Xpath
         DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();

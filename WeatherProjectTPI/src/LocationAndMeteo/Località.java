@@ -50,10 +50,19 @@ public class Località {
         richiesta http al servizio di georeferenziazione di google sostituisce gli spazi negli
         attributi con + e poi li aggiunge nella forma richiesta
     */
-    public String toURL ()
+    public String getAddress ()
     {
-       String temp = address;
-       temp = temp.replace(' ', '+');
-       return url + "address=" + temp;
+       return address;
+    }
+
+    public String toURL() {
+        String temp = address;
+        temp = temp.replace(' ', '+');
+        return url + "address=" + temp;
+    }
+    public String toMeteoURL ()
+    {
+        String url = "http://api.openweathermap.org/data/2.5/weather?";
+        return url + "lat=" + Latitudine + "&lon=" + Longitudine + "&units=metric&appid=d5266bad87ce211d1b641f024f889807&mode=xml";
     }
 }

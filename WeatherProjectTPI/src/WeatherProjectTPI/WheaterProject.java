@@ -2,9 +2,12 @@ package WeatherProjectTPI;
 
 import RichiestaGeoLocalizzazione.Richiesta;
 import LocationAndMeteo.Località;
+import LocationAndMeteo.Meteo;
 import RichiestaGeoLocalizzazione.Estrattore;
+import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -28,10 +31,18 @@ public class WheaterProject {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws MalformedURLException, IOException, FileNotFoundException, ParserConfigurationException{
-        Località location = new Località ("new york");
         
+        System.out.println("inserire nome della location:");
+        InputStreamReader reader = new InputStreamReader (System.in);
+        BufferedReader myInput = new BufferedReader (reader);
+        String prov = new String();
+        try { prov = myInput.readLine(); } catch (IOException e) {}       
+        Località location = new Località (prov);
         Richiesta.get(location);
-        location = Estrattore.drawLocation (location);
+        location = RichiestaGeoLocalizzazione.Estrattore.EstrattoreLocalizzazione (location);
+        RichiestaMeteo.Richiesta1.get(location);
+        Meteo weather = RichiestaMeteo.Estrattore1.EstrattoreTempo(location);
+        System.out.println (weather.toString());
     }
     
 }
